@@ -1,0 +1,814 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='top_songs_by_year+' inline='true' name='federated.0knqyll1jnlwhf0zrt2cw1hqf95r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='top_songs_by_year' name='textscan.143ibpl0vreoya14erq2d0gtvb1w'>
+            <connection class='textscan' directory='/Users/kaneishareese/Documents/DataPortfolio/DataPortfolio/apple-music-analysis/data/processed' filename='top_songs_by_year.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='textscan.143ibpl0vreoya14erq2d0gtvb1w' name='top_songs_by_year.csv' table='[top_songs_by_year#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='playlist' ordinal='0' />
+              <column datatype='integer' name='track_id' ordinal='1' />
+              <column datatype='integer' name='year' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.143ibpl0vreoya14erq2d0gtvb1w' name='all_songs.csv' table='[all_songs#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Track ID' ordinal='0' />
+              <column datatype='string' name='Title' ordinal='1' />
+              <column datatype='string' name='Artist' ordinal='2' />
+              <column datatype='string' name='Composer' ordinal='3' />
+              <column datatype='string' name='Album' ordinal='4' />
+              <column datatype='string' name='Genre' ordinal='5' />
+              <column datatype='datetime' name='Release Date' ordinal='6' />
+              <column datatype='string' name='Kind' ordinal='7' />
+              <column datatype='integer' name='Total Time (ms)' ordinal='8' />
+              <column datatype='datetime' name='Date Modified' ordinal='9' />
+              <column datatype='datetime' name='Date Added' ordinal='10' />
+              <column datatype='datetime' name='Release Date (Raw)' ordinal='11' />
+              <column datatype='datetime' name='Date Modified (Raw)' ordinal='12' />
+              <column datatype='datetime' name='Date Added (Raw)' ordinal='13' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top_songs_by_year.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>playlist</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[playlist]</local-name>
+            <parent-name>[top_songs_by_year.csv]</parent-name>
+            <remote-alias>playlist</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[track_id]</local-name>
+            <parent-name>[top_songs_by_year.csv]</parent-name>
+            <remote-alias>track_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[top_songs_by_year.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Track ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Track ID]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Track ID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Title]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Title</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Artist</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Artist]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Artist</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Composer</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Composer]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Composer</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Album</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Album]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Album</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Genre</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Genre]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Genre</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Release Date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Release Date]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Release Date</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Kind</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Kind]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Kind</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total Time (ms)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total Time (ms)]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Total Time (ms)</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date Modified</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Date Modified]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Date Modified</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date Added</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Date Added]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Date Added</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Release Date (Raw)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Release Date (Raw)]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Release Date (Raw)</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date Modified (Raw)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Date Modified (Raw)]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Date Modified (Raw)</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date Added (Raw)</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Date Added (Raw)]</local-name>
+            <parent-name>[all_songs.csv]</parent-name>
+            <remote-alias>Date Added (Raw)</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Track ID]' role='dimension' type='ordinal' />
+      <column caption='all_songs.csv' datatype='table' name='[__tableau_internal_object_id__].[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]' role='measure' type='quantitative' />
+      <column caption='top_songs_by_year.csv' datatype='table' name='[__tableau_internal_object_id__].[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]' role='measure' type='quantitative' />
+      <column caption='Playlist' datatype='string' name='[playlist]' role='dimension' type='nominal' />
+      <column caption='Track Id' datatype='integer' name='[track_id]' role='dimension' type='ordinal' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/9s/m5dd54gn5_jc24tyt3vm_3380000gn/T/tableau-temp/#TableauTemp_16975ki03oa77s12sacjr1sfq9fe.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/19/2025 11:03:11 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04' table='[Extract].[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]' type='table' />
+            <relation name='all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF' table='[Extract].[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]' type='table' />
+          </relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>playlist</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[playlist]</local-name>
+              <parent-name>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</parent-name>
+              <remote-alias>playlist</remote-alias>
+              <ordinal>0</ordinal>
+              <family>top_songs_by_year.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>track_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[track_id]</local-name>
+              <parent-name>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</parent-name>
+              <remote-alias>track_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>top_songs_by_year.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>686</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>year</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[year]</local-name>
+              <parent-name>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</parent-name>
+              <remote-alias>year</remote-alias>
+              <ordinal>2</ordinal>
+              <family>top_songs_by_year.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Track ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Track ID]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Track ID</remote-alias>
+              <ordinal>3</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1943</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Title]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Title</remote-alias>
+              <ordinal>4</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1373</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Artist</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Artist]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Artist</remote-alias>
+              <ordinal>5</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>280</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Composer</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Composer]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Composer</remote-alias>
+              <ordinal>6</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>707</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Album</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Album]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Album</remote-alias>
+              <ordinal>7</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>388</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Genre</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Genre]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Genre</remote-alias>
+              <ordinal>8</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>32</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Release Date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Release Date]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Release Date</remote-alias>
+              <ordinal>9</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>287</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Kind</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Kind]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Kind</remote-alias>
+              <ordinal>10</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total Time (ms)</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Total Time (ms)]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Total Time (ms)</remote-alias>
+              <ordinal>11</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1137</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date Modified</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Date Modified]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Date Modified</remote-alias>
+              <ordinal>12</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>400</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date Added</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Date Added]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Date Added</remote-alias>
+              <ordinal>13</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>388</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Release Date (Raw)</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Release Date (Raw)]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Release Date (Raw)</remote-alias>
+              <ordinal>14</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>287</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date Modified (Raw)</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Date Modified (Raw)]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Date Modified (Raw)</remote-alias>
+              <ordinal>15</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>400</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Date Added (Raw)</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Date Added (Raw)]</local-name>
+              <parent-name>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</parent-name>
+              <remote-alias>Date Added (Raw)</remote-alias>
+              <ordinal>16</ordinal>
+              <family>all_songs.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>388</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='all_songs.csv' id='all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF'>
+            <properties context=''>
+              <relation connection='textscan.143ibpl0vreoya14erq2d0gtvb1w' name='all_songs.csv' table='[all_songs#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Track ID' ordinal='0' />
+                  <column datatype='string' name='Title' ordinal='1' />
+                  <column datatype='string' name='Artist' ordinal='2' />
+                  <column datatype='string' name='Composer' ordinal='3' />
+                  <column datatype='string' name='Album' ordinal='4' />
+                  <column datatype='string' name='Genre' ordinal='5' />
+                  <column datatype='datetime' name='Release Date' ordinal='6' />
+                  <column datatype='string' name='Kind' ordinal='7' />
+                  <column datatype='integer' name='Total Time (ms)' ordinal='8' />
+                  <column datatype='datetime' name='Date Modified' ordinal='9' />
+                  <column datatype='datetime' name='Date Added' ordinal='10' />
+                  <column datatype='datetime' name='Release Date (Raw)' ordinal='11' />
+                  <column datatype='datetime' name='Date Modified (Raw)' ordinal='12' />
+                  <column datatype='datetime' name='Date Added (Raw)' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF' table='[Extract].[all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF]' type='table' />
+            </properties>
+          </object>
+          <object caption='top_songs_by_year.csv' id='top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04'>
+            <properties context=''>
+              <relation connection='textscan.143ibpl0vreoya14erq2d0gtvb1w' name='top_songs_by_year.csv' table='[top_songs_by_year#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='playlist' ordinal='0' />
+                  <column datatype='integer' name='track_id' ordinal='1' />
+                  <column datatype='integer' name='year' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04' table='[Extract].[top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[track_id]' />
+              <expression op='[Track ID]' />
+            </expression>
+            <first-end-point object-id='top_songs_by_year.csv_5E45322B30014438878256C5E12FEA04' />
+            <second-end-point object-id='all_songs.csv_5CEBBFB1780B44B78F635CA88D2FF9BF' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='top_songs_by_year+' name='federated.0knqyll1jnlwhf0zrt2cw1hqf95r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0knqyll1jnlwhf0zrt2cw1hqf95r'>
+            <column datatype='string' name='[Genre]' role='dimension' type='nominal' />
+            <column-instance column='[Genre]' derivation='CountD' name='[ctd:Genre:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0knqyll1jnlwhf0zrt2cw1hqf95r].[ctd:Genre:qk]</rows>
+        <cols>[federated.0knqyll1jnlwhf0zrt2cw1hqf95r].[none:year:qk]</cols>
+      </table>
+      <simple-id uuid='{4B279034-1C3D-4BEC-8531-091CC6571498}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0knqyll1jnlwhf0zrt2cw1hqf95r].[none:Genre:nk]</field>
+            <field>[federated.0knqyll1jnlwhf0zrt2cw1hqf95r].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9CF1D427-406F-46BA-B731-0C84153B7528}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
