@@ -1,0 +1,56 @@
+# 🎼 Apple Music XML Structure
+
+        - Major Version
+        - Minor Version
+        - Date
+        - Application Version
+        - Features
+        - Show Content Ratings
+        - Music Folder
+        - Library Persistent ID
+        - Tracks
+            - {Track ID}**
+                - Track ID
+                - Name
+                - Artist
+                - Album Artist
+                - Composer
+                - Album
+                - Genre
+                - Kind
+                - Size
+                - Total Time
+                - Disc Number
+                - Disc Count
+                - Track Number
+                - Track Count
+                - Year
+                - Bit Rate
+                - Sample Rate
+                - Release Date
+                - Artwork Count
+                - Sort Album
+                - Sort Artist
+                - Sort Name
+                - Persistent ID
+                - Explicit
+                - Track Type
+                - Apple Music
+                - Playlist Only
+                - Date Modified
+                - Date Added
+                - Normalization
+                - Location
+                - File Folder Count
+                - Library Folder Count
+        - Playlists
+                - Name
+                - Description
+                - Master
+                - Playlist ID
+                - Playlist Persistent ID
+                - Visible
+                - All Items
+                - Playlist Items
+                        - Track ID
+                        
